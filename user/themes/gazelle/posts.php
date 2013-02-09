@@ -1,0 +1,1 @@
+<?php foreach($posts as $post) echo $theme->content($post); ?>

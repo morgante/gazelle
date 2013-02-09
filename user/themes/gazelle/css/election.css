@@ -1,0 +1,127 @@
+body {
+	font-family: Helvetica;
+}
+#header hgroup {
+	position: relative;
+}
+#header h1 {
+	background: url('../images/logo.png') no-repeat center 30px;
+	width: 100%;
+	height: 184px;
+	margin: 0px;
+	padding: 0px;
+	text-indent: -10000px;
+}
+#header h2 {
+	position: absolute;
+	left: 503px;
+	bottom: 0px;;
+	padding: 0;
+	margin: 0;
+	font-size: 220%;
+	line-height: 1em;
+	text-transform: uppercase;
+	font-family: Baskerville;
+	color: #616060;
+	font-weight: normal;
+}
+#header span.date {
+	position: absolute;
+	left: 50px;
+	top: 10px;
+	color: #656565;
+	font-size: 130%;
+}
+
+#nav {
+	height: 40px;
+	width: 100%;
+	background: #FFE100;
+}
+
+#nav ul {
+	margin: 0 auto;
+	width: 980px;
+	list-style: none;
+}
+#nav ul li {
+	width: 140px;
+	float: left;
+	list-style: none;
+}
+#nav ul li a {
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	color: #656565;
+	position: relative ;
+}
+#nav ul li.active a {
+	background: #996500;
+	color: #FFF;
+}
+#nav ul li.active a:after {
+	position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: solid 10px #996500;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
+
+#content {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#content h3 {
+	text-align: center;
+}
+
+#content .posts {
+	width: 1200px;
+}
+
+#content .post {
+	width: 470px;
+	margin-right: 20px;
+	float: left;
+	position: relative;
+}
+
+#content .post h1 {
+	margin: 0;
+	font-size: 200%;
+}
+
+#content .post h2 {
+	margin: 0;
+	font-size: 120%;
+	color: #616060;
+	line-height: 1em;
+	font-weight: normal;
+}
+
+#content .post img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#content .post ul.nav {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+#content .post .content {
+	display: none;
+}
+
+#content .post .content.active {
+	display: block;
+}
