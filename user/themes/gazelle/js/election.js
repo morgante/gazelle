@@ -3,7 +3,7 @@ var election = {
 		$('#nav a').click( function() {
 			$('#nav .active').removeClass('active');
 			$(this).parent().addClass('active');
-			$('.contentSection.active').slideUp();
+			$('.contentSection.active').slideUp().removeClass('active');
 			$($(this).attr('href')).slideDown().addClass('active');
 			return false;
 		});
