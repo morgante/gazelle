@@ -9,6 +9,8 @@ class WaziTheme extends Theme
 		
 		Stack::add('template_header_javascript', '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js', 'bootstrap-js');
 		
+		Stack::add('template_header_javascript', $theme->get_url('/js/jquery.jcarousel.js'), 'jquery.jcarousel');
+		
 		Stack::add('template_header_javascript', $theme->get_url('/js/election.js'), 'election-js');
 		
 		// Add this line to your config.php to show an error and a notice, and

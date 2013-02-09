@@ -34,5 +34,5 @@
 			</ul>
 		</div>
 
-	<div id="content">
+	<div id="content" class="jcarousel">
 		<?php Session::messages_out(); ?>

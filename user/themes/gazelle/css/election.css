@@ -27,7 +27,7 @@ body {
 }
 #header span.date {
 	position: absolute;
-	left: 50px;
+	left: 120px;
 	top: 10px;
 	color: #656565;
 	font-size: 130%;
@@ -72,6 +72,15 @@ body {
   border-left: solid 10px transparent;
   border-right: solid 10px transparent;
 }
+
+.contentSection {
+	display:none;
+}
+
+.contentSection.active {
+	display:block;
+}
+
 
 #content {
 	width: 980px;
