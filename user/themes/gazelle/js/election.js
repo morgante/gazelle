@@ -9,11 +9,10 @@ var election = {
 		});
 				
 		$('.post ul.nav a').click( function() {
-			if( !$(this).hasClass('active') ){
-				$(this).parent().addClass('active').siblings().removeClass('active');
-				$('.content.active', $(this).parents('.post')).slideUp().siblings('.content').addClass('active').slideDown();
-				return false;
-			}
+			$(this).parent().addClass('active').siblings().removeClass('active');
+			$('.contentSection.active', $(this).parents('.post')).slideUp().removeClass('active');
+			$($(this).attr('href')).slideDown().addClass('active');
+			return false
 		});
 	}
 }
