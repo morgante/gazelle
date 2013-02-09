@@ -136,3 +136,10 @@ body {
 #content .post .content.active {
 	display: block;
 }
+
+#footer p {
+	width: 100%;
+	float: left;
+	line-height: 2em;
+	text-align: center;
+}
