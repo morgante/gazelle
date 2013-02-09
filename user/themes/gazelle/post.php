@@ -14,7 +14,9 @@
 	</div>
 	
 	<div class="content" id="platform<?php echo $content->id; ?>">
-		<?php echo Post::get( array( 'slug' => $content->slug . '-platform' ) ) )->content; ?>
+		<?php
+		$plat = Post::get( array( 'slug' => ($content->slug . '-platform') ) );
+		echo $plat->content_out; ?>
 	</div>
 
 </article>
