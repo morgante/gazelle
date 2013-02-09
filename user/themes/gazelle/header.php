@@ -17,7 +17,7 @@
 			<div class="container">
 				<hgroup>
 					<h1 itemprop="name"><a href="/" itemprop="url"><?php echo Options::get('title'); ?></a></h1>
-					<h2 itemprop="issue">Elections 2013</h2>
+					<h2 itemprop="issue">Special Edition: Elections 2013</h2>
 				</hgroup>
 			</div>
 		</header>
