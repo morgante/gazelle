@@ -103,6 +103,10 @@ body {
 	position: relative;
 }
 
+#content .post:nth-child(odd) {
+	clear: both;
+}
+
 #content .post h1 {
 	margin: 0;
 	font-size: 160%;
