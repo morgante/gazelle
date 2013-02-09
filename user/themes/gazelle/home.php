@@ -4,10 +4,7 @@
 		<h3>President</h3>
 
 		<div class="posts" itemprop="blogPosts">
-			<?php
-			$presidents = Posts::get( array( 'vocabulary' => array( 'tags:term' => 'president' ) ) );
-			echo $theme->content($posts);
-			?>
+			<?php foreach(Posts::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'president', 'profile') ) ) ) as $post) echo $theme->content($post); ?>
 			
 			<span class="clear"></span>
 		</div>

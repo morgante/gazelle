@@ -13,11 +13,11 @@
 <div class="wrapper">
 	
 		<header id="header">
+			<span class="date">Official launch date: <strong>March 11, 2013</strong></span>
 			<div class="container">
 				<hgroup>
 					<h1 itemprop="name"><a href="/" itemprop="url"><?php echo Options::get('title'); ?></a></h1>
 					<h2 itemprop="issue">Elections 2013</h2>
-					<span class="date">Full Launch <strong>February 22, 2012</strong></span>
 				</hgroup>
 			</div>
 		</header>
@@ -34,5 +34,4 @@
 			</ul>
 		</div>
 
-	<div id="content" class="jcarousel">
-		<?php Session::messages_out(); ?>
+	<div id="content">

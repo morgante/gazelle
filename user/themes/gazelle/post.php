@@ -1,4 +1,4 @@
-<article id="post-<?php echo $content->id; ?>" class="post medi" itemscope itemtype="http://schema.org/BlogPosting">
+<article id="post-<?php echo $content->id; ?>" class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 	<img src="http://voting.sg.nyuad.org/photos/alex.jpg">
 	<h1 itemprop="name"><?php echo $content->title_out; ?></h1>
@@ -14,7 +14,7 @@
 	</div>
 	
 	<div class="content" id="platform<?php echo $content->id; ?>">
-		<?php echo $content->content_out; ?>
+		<?php echo Post::get( array( 'slug' => $content->slug . '-platform' ) ) )->content; ?>
 	</div>
 
 </article>
