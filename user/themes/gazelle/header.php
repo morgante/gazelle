@@ -25,12 +25,12 @@
 		<div id="nav">
 			<ul>
 				<li id="nav-president" to='#president' class="active"><a href="#president">President</a></li>
-				<li id="nav-vp"  to='#vp'><a href="#vp">Vice President</a></li>
-				<li id="nav-senator"><a href="#senator">Senator</a></li>
-				<li id="nav-as"><a href="#as">Alternate Senator</a></li>
-				<li id="nav-secretary"><a href="#secretary">Secretary</a></li>
-				<li id="nav-treasurer"><a href="#treasurer">Treasurer</a></li>
-				<li id="nav-junior"><a href="#junior">Junior Representative</a></li>
+				<li id="nav-vp" to='#vp'><a href="#vp">Vice President</a></li>
+				<li id="nav-senator" to='#senator'><a href="#senator">Senator</a></li>
+				<li id="nav-as" to='#as'><a href="#as">Alternate Senator</a></li>
+				<li id="nav-secretary" to='#secretary'><a href="#secretary">Secretary</a></li>
+				<li id="nav-treasurer" to='#treasurer'><a href="#treasurer">Treasurer</a></li>
+				<li id="nav-junior" to='#junior'><a href="#junior">Junior Representative</a></li>
 			</ul>
 		</div>
 
