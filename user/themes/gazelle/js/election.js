@@ -14,6 +14,14 @@ var election = {
 			$($(this).attr('href')).slideDown().addClass('active');
 			return false
 		});
+		
+		$('#results a').click( function() {
+			$('#nav .active').removeClass('active');
+			// $('a[to="' + $(this).attr('href') + '"]').addClass('active');
+			$('.contentSection.active').slideUp().removeClass('active');
+			$($(this).attr('href')).slideDown().addClass('active');
+			return false
+		});
 	}
 }
 

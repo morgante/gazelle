@@ -97,10 +97,11 @@ body {
 }
 
 #content .post {
-	width: 470px;
+	width: 460px;
 	margin-right: 20px;
 	float: left;
 	position: relative;
+	padding: 5px;
 }
 
 #content .post:nth-child(odd) {
@@ -139,6 +140,10 @@ body {
 
 #content .post .content.active {
 	display: block;
+}
+
+#content #post-231, #content #post-331, #content #post-211, #content #post-131, #content #post-351, #content #post-141, #content #post-291 {
+	background: #FFEE73;
 }
 
 #footer p {
