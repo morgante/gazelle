@@ -8,7 +8,7 @@
 			<li>Vice President: <a href="#vp">Corey Meyer</a></li>
 			<li>Senator: <a href="#senator">Geo Kamus</a></li>
 			<li>Alternate Senator: <a href="#as">Clara Correia</a></li>
-			<li>Secretary: <a href="#treasurer">Veronica Houk</a></li>
+			<li>Secretary: <a href="#secretary">Veronica Houk</a></li>
 			<li>Treasurer: <a href="#treasurer">Angelina Micha Djaja</a></li>
 			<li>Class of 2014 Representative: <a href="#junior">Irene Pañeda</a></li>
 		</ul>
