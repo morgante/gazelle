@@ -1,2 +1,43 @@
 /* header */
-.masthead 
+
+/* tiles */
+.tiles .tile {
+	overflow: hidden;
+	height: 220px;
+	position: relative;
+	margin-bottom: 20px;
+}
+.tiles .tile a {
+	display: block;
+}
+.tiles .tile img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: none;
+}
+.tiles .tile a:before {
+	-moz-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+	box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 220px;
+	content: "";
+	z-index: 1;
+	background: blue;
+	opacity: 0.5;
+}
+.tiles .tile h3 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 5;
+	background: red;
+	color: #FFF;
+	margin: 0;
+	width: 100%;
+}
