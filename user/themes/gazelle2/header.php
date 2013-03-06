@@ -26,7 +26,7 @@ $time = HabariDateTime::date_create();
 			</div>
 		</div>
 		
-		<div class="nav row">
+		<div class="navigation row">
 			<div class="span4 news"><a href="#">News</a></div>
 			<div class="span4 features"><a href="#">Features</a></div>
 			<div class="span4 opinion"><a href="#">Opinion</a></div>
@@ -34,4 +34,4 @@ $time = HabariDateTime::date_create();
 		
 	</div>
 
-	<div id="content">
+	<div id="content" class="row">

@@ -1,6 +1,6 @@
 <?php $theme->display('header'); ?>
 
-	<div id="home-tiles" class="tiles row">
+	<div id="home-tiles" class="tiles">
 		<?php for ($i = 1; $i <= 9; $i++) { ?>
 		<div id="story<?php echo $i; ?>" class="tile span4">
 			<a href="#">
