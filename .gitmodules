@@ -1,3 +1,6 @@
 [submodule "system"]
 	path = system
 	url = https://github.com/habari/system.git
+[submodule "user/plugins/simplecategories"]
+	path = user/plugins/simplecategories
+	url = https://github.com/habari-extras/simplecategories.git
