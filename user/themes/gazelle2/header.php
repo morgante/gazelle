@@ -1,3 +1,6 @@
+<?php
+$time = HabariDateTime::date_create();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -17,22 +20,16 @@
 			<div class="logo span3">Logo</div>
 			<div class="name span6">The Gazelle</div>
 			<div class="meta span3">
-				<p class="date">Monday, January 7th, 2012</p>
-				<p class="time">3:45pm, Abu Dhabi UAE</p>
+				<p class="date"><?php echo $time->format('l, F n, Y'); ?></p>
+				<p class="time"><?php echo $time->format('g:ia') ?>, Abu Dhabi UAE</p>
 				<p class="temperature">100º F, 30º C</p>
 			</div>
 		</div>
 		
-		<div class="navbar">
-			<div class="navbar-inner">
-				<div class="container row">
-					<ul class="nav row">
-						<li class="span4"><a href="#">News</a></li>
-						<li class="span4"><a href="#">Features</a></li>
-						<li class="span4"><a href="#">Opinion</a></li>
-					</ul>
-				</div>
-			</div><!-- /.navbar -->
+		<div class="nav row">
+			<div class="span4 news"><a href="#">News</a></div>
+			<div class="span4 features"><a href="#">Features</a></div>
+			<div class="span4 opinion"><a href="#">Opinion</a></div>
 		</div>
 		
 	</div>

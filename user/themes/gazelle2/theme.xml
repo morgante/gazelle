@@ -9,4 +9,11 @@
 	<description><![CDATA[This is the main theme for The Gazelle.]]></description>
 	
 	<help><value><![CDATA[There's no help for you now.]]></value></help>
+	
+	<areas>
+		<area name="sidebar" title="Sidebar">
+			<description><![CDATA[The sidebar area]]></description>
+		</area>
+	</areas>
+	
 </pluggable>
