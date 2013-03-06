@@ -6,7 +6,7 @@
 	<url>http://thegazelle.org</url>
 	<version>1.0</version>
 	<template_engine>rawphpengine</template_engine>
-	<description><![CDATA[This is a theme for The Gazelle.]]></description>
+	<description><![CDATA[This is a theme for preview election issue of The Gazelle.]]></description>
 	
 	<help><value><![CDATA[There's no help for you now.]]></value></help>
 </pluggable>

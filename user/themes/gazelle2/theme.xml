@@ -4,9 +4,9 @@
 	<license url="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License 2.0</license>
 	<author url="http://morgante.net">Morgante Pell</author>
 	<url>http://thegazelle.org</url>
-	<version>1.0</version>
+	<version>2.0</version>
 	<template_engine>rawphpengine</template_engine>
-	<description><![CDATA[This is a theme for The Gazelle.]]></description>
+	<description><![CDATA[This is the main theme for The Gazelle.]]></description>
 	
 	<help><value><![CDATA[There's no help for you now.]]></value></help>
 </pluggable>

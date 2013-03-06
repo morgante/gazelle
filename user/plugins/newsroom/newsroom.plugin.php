@@ -6,11 +6,11 @@ class NewsRoom extends Plugin
 	/**
 	 * Add the options per post
 	 */
-	public function action_form_publish($form, $post, $context)
+	public function action_form_publish( $form, $post )
 	{
-		// add image field
-		$form->append('text', 'main_image', 'main_image', _t('Main image', __CLASS__));
-		$form->main_image->value = $post->info->main_image;
+		$main_image = $form->append( 'text', 'main_image', 'null:null', _t( 'Main Image' ), 'admincontrol_text' );
+		$main_image->value = $post->info->main_image;
+		$form->move_after( $main_image, $form->title );
 	}
 
 	/**

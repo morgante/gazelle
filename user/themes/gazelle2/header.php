@@ -10,28 +10,31 @@
 </head>
 <body class="<?php echo $theme->body_class(); ?>" itemscope itemtype="http://schema.org/Blog">
 
-<div class="wrapper">
+<div class="container">
 	
-		<header id="header">
-			<span class="date">Official launch date: <strong>March 11, 2013</strong></span>
-			<div class="container">
-				<hgroup>
-					<h1 itemprop="name"><a href="/" itemprop="url"><?php echo Options::get('title'); ?></a></h1>
-					<h2 itemprop="issue">Elections 2013</h2>
-				</hgroup>
+	<div class="masthead">
+		<div class="row">
+			<div class="logo span3">Logo</div>
+			<div class="name span6">The Gazelle</div>
+			<div class="meta span3">
+				<p class="date">Monday, January 7th, 2012</p>
+				<p class="time">3:45pm, Abu Dhabi UAE</p>
+				<p class="temperature">100º F, 30º C</p>
 			</div>
-		</header>
-		
-		<div id="nav">
-			<ul>
-				<li id="nav-president" to='#president' class="active"><a href="#president">President</a></li>
-				<li id="nav-vp" to='#vp'><a href="#vp">Vice President</a></li>
-				<li id="nav-senator" to='#senator'><a href="#senator">Senator</a></li>
-				<li id="nav-as" to='#as'><a href="#as">Alternate Senator</a></li>
-				<li id="nav-secretary" to='#secretary'><a href="#secretary">Secretary</a></li>
-				<li id="nav-treasurer" to='#treasurer'><a href="#treasurer">Treasurer</a></li>
-				<li id="nav-junior" to='#junior'><a href="#junior">Junior Representative</a></li>
-			</ul>
 		</div>
+		
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container row">
+					<ul class="nav row">
+						<li class="span4"><a href="#">News</a></li>
+						<li class="span4"><a href="#">Features</a></li>
+						<li class="span4"><a href="#">Opinion</a></li>
+					</ul>
+				</div>
+			</div><!-- /.navbar -->
+		</div>
+		
+	</div>
 
 	<div id="content">

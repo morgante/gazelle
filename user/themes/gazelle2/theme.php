@@ -9,9 +9,11 @@ class WaziTheme extends Theme
 		
 		Stack::add('template_header_javascript', '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js', 'bootstrap-js');
 		
-		Stack::add('template_header_javascript', $theme->get_url('/js/jquery.jcarousel.js'), 'jquery.jcarousel');
+		Stack::add('template_stylesheet', '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css', 'bootstrap');
 		
-		Stack::add('template_header_javascript', $theme->get_url('/js/election.js'), 'election-js');
+		// Stack::add('template_header_javascript', $theme->get_url('/js/jquery.jcarousel.js'), 'jquery.jcarousel');
+		
+		// Stack::add('template_header_javascript', $theme->get_url('/js/election.js'), 'election-js');
 		
 		// Add this line to your config.php to show an error and a notice, and
 		// to process the raw LESS code via javascript instead of the rendered CSS:  define('DEBUG_THEME', 1);
@@ -23,8 +25,7 @@ class WaziTheme extends Theme
 			Stack::add('template_stylesheet', array($theme->get_url('/less/style.less'), null, array('type'=> null, 'rel' => 'stylesheet/less')), 'style');
 		}
 		else {
-			Stack::add('template_stylesheet', '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css', 'bootstrap');
-			Stack::add('template_stylesheet', $theme->get_url('/css/election.css'), 'election');
+			Stack::add('template_stylesheet', $theme->get_url('/css/style.css'), 'style');
 		}
 	}
 }
