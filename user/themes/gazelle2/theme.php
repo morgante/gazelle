@@ -9,6 +9,10 @@ class WaziTheme extends Theme
 		
 		Stack::add('template_header_javascript', '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js', 'bootstrap-js');
 		
+		Stack::add('template_header_javascript', $theme->get_url('/js/jquery.sticky.js'), 'sticky');
+		
+		Stack::add('template_header_javascript', $theme->get_url('/js/layout.js'), 'layout');
+		
 		Stack::add('template_stylesheet', '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css', 'bootstrap');
 		
 		// Stack::add('template_header_javascript', $theme->get_url('/js/jquery.jcarousel.js'), 'jquery.jcarousel');
@@ -27,6 +31,31 @@ class WaziTheme extends Theme
 		else {
 			Stack::add('template_stylesheet', $theme->get_url('/css/style.css'), 'style');
 		}
+	}
+	
+	public function add_template_vars()
+	{
+		
+		// Utils::debug( $this->request );
+		
+		if ( is_object($this->request) && $this->request->display_entry ) {
+			if ( !$this->template_engine->assigned( 'section' ) ) {
+				if( $this->post->tags->has('Opinion') )
+				{
+					$this->assign( 'section', 'opinion' );
+				} elseif( $this->post->tags->has('Features') )
+				{
+					$this->assign( 'section', 'features' );
+				} elseif( $this->post->tags->has('News') )
+				{
+					$this->assign( 'section', 'news' );
+				}
+				
+			}
+		}
+
+		parent::add_template_vars();
+		
 	}
 }
 
