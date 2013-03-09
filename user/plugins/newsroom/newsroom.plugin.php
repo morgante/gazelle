@@ -8,9 +8,12 @@ class NewsRoom extends Plugin
 	 */
 	public function action_form_publish( $form, $post )
 	{
-		$main_image = $form->append( 'text', 'main_image', 'null:null', _t( 'Main Image' ), 'admincontrol_text' );
-		$main_image->value = $post->info->main_image;
-		$form->move_after( $main_image, $form->title );
+		if( $post->content_type == Post::type( 'entry' ) )
+		{
+			$main_image = $form->append( 'text', 'main_image', 'null:null', _t( 'Main Image' ), 'admincontrol_text' );
+			$main_image->value = $post->info->main_image;
+			$form->move_after( $main_image, $form->title );
+		}
 	}
 
 	/**
