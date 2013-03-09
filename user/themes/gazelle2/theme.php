@@ -35,7 +35,9 @@ class WaziTheme extends Theme
 	
 	public function add_template_vars()
 	{
-				
+		
+		// Utils::debug( $this->request );
+		
 		if ( is_object($this->request) ) {
 			if( $this->request->display_entry && !$this->template_engine->assigned( 'section' ) ) {
 				if( $this->post->tags->has('Opinion') )
@@ -52,6 +54,18 @@ class WaziTheme extends Theme
 			elseif( $this->request->display_entries_by_tag )
 			{
 				// Utils::debug( Controller::get_param( $tag ) );
+			}
+			elseif( $this->request->display_home && !$this->template_engine->assigned( 'tiles' ) ) {
+				$posts = array();
+				$posts[] = Post::get( array( 'slug' => 'features' ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'features' ) ), 'limit' => 1 ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'opinion' ) ), 'limit' => 1 ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'news' ) ), 'limit' => 1 ) );
+				$this->assign( 'tiles', $posts );
+			}
+			elseif( $this->request->display_page && $this->post->tags->has('section') && !$this->template_engine->assigned( 'tiles' ) ) {
+				$posts = Posts::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'features' ) ), 'limit' => 9 ) );
+				$this->assign( 'tiles', $posts );
 			}
 		}
 

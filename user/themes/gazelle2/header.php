@@ -30,9 +30,9 @@ $time = HabariDateTime::date_create();
 		</div>
 		
 		<div class="navigation row">
-			<div class="span4 news"><a href="#">News</a></div>
-			<div class="span4 features"><a href="#">Features</a></div>
-			<div class="span4 opinion"><a href="#">Opinion</a></div>
+			<div class="span4 news"><a href="<?php Site::out_url( 'habari' ); ?>/news">News</a></div>
+			<div class="span4 features"><a href="<?php Site::out_url( 'habari' ); ?>/features">Features</a></div>
+			<div class="span4 opinion"><a href="<?php Site::out_url( 'habari' ); ?>/opinion">Opinion</a></div>
 		</div>
 		
 	</div>
