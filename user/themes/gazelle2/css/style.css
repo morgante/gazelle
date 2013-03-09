@@ -13,6 +13,7 @@ html, body {
 	min-height: 100%;
 	background: url('../images/main-left.png') no-repeat left top;
 	position: relative;
+	margin-bottom: 5.5em;
 }
 
 #main .redge {
@@ -115,13 +116,21 @@ html, body {
 
 /* primary */
 .primary {
-	border-right: 2px solid #EFEFEF;
-	padding-right: 15px;
 	margin-top: -15px;
+}
+
+.primary.span8 {
+	border-right: 2px solid #EFEFEF;
+	padding-right: 15px;	
 }
 
 .wrapper {
 	padding-left: 30px;
+	padding-right: 15px;
+}
+
+.primary.span12 .wrapper {
+/*	padding-right: 30px;*/
 }
 
 /* single */

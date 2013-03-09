@@ -6,9 +6,11 @@
 				<h1 itemprop="title"><?php echo $post->title_out; ?></h1>
 				<h2>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php echo $post->author->username; ?></span></span></h2>
 			</div>
-	
-			<img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/popelastday/bp1.jpg">
-	
+			
+			<?php if( $post->info->main_image != null ): ?>
+				<img class="bigpicture" src="<?php echo $post->info->main_image; ?>">
+			<?php endif; ?>
+			
 			<div class="content" itemprop="articleBody">
 				<?php echo $post->content_out; ?>
 			</div>

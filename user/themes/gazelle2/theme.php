@@ -35,11 +35,9 @@ class WaziTheme extends Theme
 	
 	public function add_template_vars()
 	{
-		
-		// Utils::debug( $this->request );
-		
-		if ( is_object($this->request) && $this->request->display_entry ) {
-			if ( !$this->template_engine->assigned( 'section' ) ) {
+				
+		if ( is_object($this->request) ) {
+			if( $this->request->display_entry && !$this->template_engine->assigned( 'section' ) ) {
 				if( $this->post->tags->has('Opinion') )
 				{
 					$this->assign( 'section', 'opinion' );
@@ -50,7 +48,10 @@ class WaziTheme extends Theme
 				{
 					$this->assign( 'section', 'news' );
 				}
-				
+			}
+			elseif( $this->request->display_entries_by_tag )
+			{
+				// Utils::debug( Controller::get_param( $tag ) );
 			}
 		}
 
