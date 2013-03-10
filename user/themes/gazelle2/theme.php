@@ -57,14 +57,19 @@ class WaziTheme extends Theme
 			}
 			elseif( $this->request->display_home && !$this->template_engine->assigned( 'tiles' ) ) {
 				$posts = array();
+				$posts[] = Post::get( array( 'slug' => 'news' ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'features', 'pick' ) ), 'limit' => 1, 'offset' => 0 ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'opinion', 'pick' ) ), 'limit' => 1, 'offset' => 0 ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'news', 'pick' ) ), 'limit' => 1, 'offset' => 0 ) );
 				$posts[] = Post::get( array( 'slug' => 'features' ) );
-				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'features' ) ), 'limit' => 1 ) );
-				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'opinion' ) ), 'limit' => 1 ) );
-				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'news' ) ), 'limit' => 1 ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'opinion', 'pick' ) ), 'limit' => 1, 'offset' => 1 ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'news', 'pick' ) ), 'limit' => 1, 'offset' => 1 ) );
+				$posts[] = Post::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'features', 'pick' ) ), 'limit' => 1, 'offset' => 1 ) );
+				$posts[] = Post::get( array( 'slug' => 'opinion' ) );
 				$this->assign( 'tiles', $posts );
 			}
 			elseif( $this->request->display_page && $this->post->tags->has('section') && !$this->template_engine->assigned( 'tiles' ) ) {
-				$posts = Posts::get( array( 'vocabulary' => array( 'tags:all:term' => array( 'features' ) ), 'limit' => 9 ) );
+				$posts = Posts::get( array( 'vocabulary' => array( 'tags:all:term' => array( $this->post->slug ) ), 'limit' => 9 ) );
 				$this->assign( 'tiles', $posts );
 			}
 		}

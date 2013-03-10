@@ -4,9 +4,9 @@
 <div id="footer">
 	<div class="container">
 		<div class="navigation row">
-			<div class="span4 about"><a href="#">About Us</a></div>
-			<div class="span4 ethics"><a href="#">Code of Ethics</a></div>
-			<div class="span4 team"><a href="#">Our Team</a></div>
+			<div class="span4 about"><a href="<?php Site::out_url( 'habari' ); ?>/about">About Us</a></div>
+			<div class="span4 ethics"><a href="<?php Site::out_url( 'habari' ); ?>/ethics">Code of Ethics</a></div>
+			<div class="span4 team"><a href="<?php Site::out_url( 'habari' ); ?>/team">Our Team</a></div>
 		</div>
 	</div>
 	
