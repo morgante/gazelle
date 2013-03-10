@@ -25,7 +25,6 @@ $time = HabariDateTime::date_create();
 			<div class="meta span3">
 				<p class="date"><?php echo $time->format('l, F n, Y'); ?></p>
 				<p class="time"><?php echo $time->format('g:ia') ?>, Abu Dhabi UAE</p>
-				<p class="temperature">100º F, 30º C</p>
 			</div>
 		</div>
 		
