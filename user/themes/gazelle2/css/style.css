@@ -176,8 +176,11 @@ html, body {
 	height: 220px;
 	content: "";
 	z-index: 1;
-	background: #000000;
+	background: #555;
 	opacity: 0.8;
+}
+.tiles .tile a:hover:before {
+	background: #333;
 }
 .tiles .tile h3 {
 	position: absolute;
