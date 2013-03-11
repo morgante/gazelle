@@ -8,7 +8,7 @@
 			</div>
 			
 			<?php if( $post->info->main_image != null ): ?>
-				<img class="bigpicture" src="<?php echo $post->info->main_image; ?>">
+				<img class="mainimage" src="<?php echo $post->info->main_image; ?>">
 			<?php endif; ?>
 			
 			<div class="content" itemprop="articleBody">

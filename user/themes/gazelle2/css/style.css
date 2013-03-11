@@ -133,6 +133,13 @@ html, body {
 /*	padding-right: 30px;*/
 }
 
+/* image */
+.mainimage {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
 /* single */
 #content h2 {
 	font-size: 140%;
