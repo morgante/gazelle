@@ -143,6 +143,11 @@ html, body {
 	margin-bottom: 10px;
 }
 
+/* comments */
+.post .comment-form #comment_content {
+	width: 80%;
+}
+
 /* single */
 #content h2 {
 	font-size: 140%;

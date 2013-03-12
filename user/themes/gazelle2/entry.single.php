@@ -14,6 +14,57 @@
 			<div class="content" itemprop="articleBody">
 				<?php echo $post->content_out; ?>
 			</div>
+			
+			<?php if ( !$post->info->comments_disabled || $post->comments->moderated->count ) :?>
+				<h2>Comments</h2>
+				<div class="comments">
+				<?php if ( $post->comments->moderated->count ) : ?>
+					<?php foreach ( $post->comments->moderated as $comment ) : ?>
+
+					<?php 
+
+						if ( $comment->url_out == '' ) {
+							$comment_url = $comment->name_out;
+						}
+						else {
+							$comment_url = '<a href="' . $comment->url_out . '" rel="external">' . $comment->name_out . '</a>';
+						}
+
+					?>
+
+					<div id="comment-<?php echo $comment->id; ?>" class="post-comment">
+						
+						<h4 class="commentor"><?php echo $comment_url; ?></h4>
+						<p class="post-comment-link"><a href="#comment-<?php echo $comment->id; ?>" title="<?php _e( 'Time of this comment - Click for comment permalink' ); ?>"><?php $comment->date->out(); ?></a></p>
+						
+						<div class="comment-body">
+							<?php echo $comment->content_out; ?>
+							<?php if ( $comment->status == Comment::STATUS_UNAPPROVED ) : ?>
+							<p class="comment-message"><em><?php _e( 'Your comment is awaiting moderation' ) ;?></em></p>
+							<?php endif; ?>
+						</div>
+					</div>
+					<?php endforeach; ?>
+				<?php else : ?>
+					<h2><?php _e( 'Be the first to write a comment!' ); ?></h2>
+				<?php endif; ?>
+					<div id="post-comments-footer">
+						<!-- TODO: A hook can be placed here-->
+					</div>
+				</div>
+			<?php endif; ?>
+			
+			<?php if ( !$post->info->comments_disabled ) : ?>
+			<div class="comment-form form">
+			<?php if ( Session::has_messages() ) Session::messages_out(); ?>
+			<?php $post->comment_form()->out(); ?>
+			</div>
+			<?php	else: ?> 
+			<div id="comments-closed">
+				<p><?php _e( "Comments are closed for this post" ); ?></p>
+			</div>
+			<?php 	endif; ?>
+			
 		</div>
 	</div>
 	
