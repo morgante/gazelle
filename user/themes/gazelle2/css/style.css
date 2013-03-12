@@ -60,9 +60,12 @@ html, body {
 
 .masthead .name a {
 	display: block;
-	width: 100%;
+	width: 436px;
+	margin-left: -217px;
+	position: absolute;
+	left: 50%;
+	top: 30px;
 	height: 150px;
-	margin-top: 30px;
 	text-indent: -10000px;
 	background: url('https://dl.dropbox.com/u/190441/gazelle/title.png') no-repeat center top;
 }
@@ -126,7 +129,7 @@ html, body {
 
 .wrapper {
 	padding-left: 30px;
-	padding-right: 15px;
+	padding-right: 30px;
 }
 
 .primary.span12 .wrapper {
@@ -149,15 +152,19 @@ html, body {
 
 /* tiles */
 .tiles {
-	padding-left: 55px;
+/*	padding-left: 55px;*/
+/*	width: 110%;*/
+	padding-top: 5px;
 }
 .tiles .tile {
+	float: left;
 	overflow: hidden;
 	height: 220px;
 /*	width: 300px;*/
+	width: 30%;
 	position: relative;
-	margin-bottom: 5px;
-	margin-left: 5px;
+	margin-top: 10px;
+	margin-left: 3%;
 }
 .tiles .tile a {
 	display: block;
@@ -199,4 +206,27 @@ html, body {
 	margin: 0;
 	width: 95%;
 	padding: 10px;
+}
+
+/* ==TABLET/MOBILE */
+@media (max-width: 979px) {
+	.masthead .logo {
+		display: none;
+	}
+	.masthead .meta {
+		display: none;
+	}
+}
+@media (max-width: 768px) {
+	.masthead .navigation {
+		width: 100%;
+	}
+	.masthead .navigation .item {
+		width: 30% !important;
+		float: left;
+	}
+	.masthead .navigation .item a {
+		width: 100%;
+/*		text-align*/
+	}
 }

@@ -20,18 +20,18 @@ $time = HabariDateTime::date_create();
 	<div class="masthead">
 		<div class="bgtile"></div>
 		<div class="row">
-			<div class="logo span4"><a href="<?php Site::out_url( 'habari' ); ?>">Go home</a></div>
+			<div class="logo span4 hidden-phone"><a href="<?php Site::out_url( 'habari' ); ?>">Go home</a></div>
 			<div class="name span5"><a href="<?php Site::out_url( 'habari' ); ?>">The Gazelle</a></div>
-			<div class="meta span3">
+			<div class="meta span3 hidden-phone">
 				<p class="date"><?php echo $time->format('l, F n, Y'); ?></p>
 				<p class="time"><?php echo $time->format('g:ia') ?>, Abu Dhabi UAE</p>
 			</div>
 		</div>
 		
 		<div class="navigation row">
-			<div class="span4 news"><a href="<?php Site::out_url( 'habari' ); ?>/news">News</a></div>
-			<div class="span4 features"><a href="<?php Site::out_url( 'habari' ); ?>/features">Features</a></div>
-			<div class="span4 opinion"><a href="<?php Site::out_url( 'habari' ); ?>/opinion">Opinion</a></div>
+			<div class="item span4 news"><a href="<?php Site::out_url( 'habari' ); ?>/news">News</a></div>
+			<div class="item span4 features"><a href="<?php Site::out_url( 'habari' ); ?>/features">Features</a></div>
+			<div class="item span4 opinion"><a href="<?php Site::out_url( 'habari' ); ?>/opinion">Opinion</a></div>
 		</div>
 		
 	</div>
