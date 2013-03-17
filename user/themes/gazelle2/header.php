@@ -23,7 +23,7 @@ $time = HabariDateTime::date_create();
 			<div class="logo span4 hidden-phone"><a href="<?php Site::out_url( 'habari' ); ?>">Go home</a></div>
 			<div class="name span5"><a href="<?php Site::out_url( 'habari' ); ?>">The Gazelle</a></div>
 			<div class="meta span3 hidden-phone">
-				<p class="date"><?php echo $time->format('l, F n, Y'); ?></p>
+				<p class="date"><?php echo $time->format('l, F j, Y'); ?></p>
 				<p class="time"><?php echo $time->format('g:ia') ?>, Abu Dhabi UAE</p>
 			</div>
 		</div>
