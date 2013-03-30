@@ -7,3 +7,6 @@
 [submodule "user/plugins/assignuser"]
 	path = user/plugins/assignuser
 	url = https://github.com/morgante/assignuser.git
+[submodule "user/plugins/habaribox"]
+	path = user/plugins/habaribox
+	url = https://github.com/habari-extras/habaribox.git
