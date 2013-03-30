@@ -10,9 +10,9 @@ class NewsRoom extends Plugin
 	{
 		if( $post->content_type == Post::type( 'entry' ) )
 		{
-			$main_image = $form->append( 'text', 'main_image', 'null:null', _t( 'Main Image' ), 'admincontrol_text' );
-			$main_image->value = $post->info->main_image;
-			$form->move_after( $main_image, $form->title );
+			$thumbnail = $form->append( 'text', 'thumbnail', 'null:null', _t( 'Thumbnail' ), 'admincontrol_text' );
+			$thumbnail->value = $post->thumb;
+			$form->move_after( $thumbnail, $form->title );
 		}
 	}
 
@@ -22,7 +22,37 @@ class NewsRoom extends Plugin
 	 */
 	public function action_publish_post( $post, $form )
 	{		
-		$post->info->main_image = $form->main_image->value;
+		$post->info->thumbnail = $form->thumbnail->value;
+	}
+	
+	/**
+	 * Automatically chose a thumbnail image
+	 */
+	public function filter_post_thumb( $thumb, $post )
+	{
+		if( $post->info->thumbnail != null )
+		{
+			// we have an explicit (new system) thumbnail
+			return $post->info->thumbnail;
+		}
+		elseif( $post->info->main_image != null )
+		{
+			// use an old-style thumbnail
+			return $post->info->main_image;
+		}
+		return $thumb;
+	}
+	
+	/**
+	 * We need to inject old-style thumbnail images
+	 */
+	public function filter_post_content_out( $content, $post )
+	{
+		if( $post->info->main_image != null )
+		{
+			$content = '<img class="mainimage" src="' . $post->info->main_image . '">' . $content;
+		}
+		return $content;
 	}
 }
 

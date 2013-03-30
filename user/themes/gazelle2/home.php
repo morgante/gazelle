@@ -5,7 +5,7 @@
 			<?php foreach( $tiles as $tile ): ?>
 			<div id="story-<?php echo $tile->slug; ?>" class="tile">
 				<a href="<?php echo $tile->permalink; ?>">
-					<?php if( $tile->info->main_image): ?><img src="<?php echo $tile->info->main_image; ?>" /><?php endif; ?>
+					<?php if( $tile->thumb): ?><img src="<?php echo $tile->thumb; ?>" /><?php endif; ?>
 					<h3><?php echo $tile->title; ?></h3>
 				</a>
 			</div>
