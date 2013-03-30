@@ -7,10 +7,6 @@
 				<h2>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php echo $post->author->username; ?></span></span></h2>
 			</div>
 			
-			<?php if( $post->info->main_image != null ): ?>
-				<img class="mainimage" src="<?php echo $post->info->main_image; ?>">
-			<?php endif; ?>
-			
 			<div class="content" itemprop="articleBody">
 				<?php echo $post->content_out; ?>
 			</div>
