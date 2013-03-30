@@ -4,3 +4,6 @@
 [submodule "user/plugins/simplecategories"]
 	path = user/plugins/simplecategories
 	url = https://github.com/habari-extras/simplecategories.git
+[submodule "user/plugins/assignuser"]
+	path = user/plugins/assignuser
+	url = https://github.com/morgante/assignuser.git
