@@ -26,19 +26,32 @@ class NewsRoom extends Plugin
 	}
 	
 	/**
+	 * Make sure to apply shortcodes (important for DropBox)
+	 */
+	function filter_shortcode_fields($fields, $post)
+	{
+		$fields[] = 'thumb';
+		$fields[] = 'thumbnail';
+		return $fields;
+	}
+	
+	/**
 	 * Automatically chose a thumbnail image
 	 */
-	public function filter_post_thumb( $thumb, $post )
+	public function filter_post_get_6( $thumb, $name, $post )
 	{
-		if( $post->info->thumbnail != null )
+		if( $name == 'thumb' || $name == 'thumbnail' )
 		{
-			// we have an explicit (new system) thumbnail
-			return $post->info->thumbnail;
-		}
-		elseif( $post->info->main_image != null )
-		{
-			// use an old-style thumbnail
-			return $post->info->main_image;
+			if( $post->info->thumbnail != null )
+			{
+				// we have an explicit (new system) thumbnail
+				return $post->info->thumbnail;
+			}
+			elseif( $post->info->main_image != null )
+			{
+				// use an old-style thumbnail
+				return $post->info->main_image;
+			}
 		}
 		return $thumb;
 	}
@@ -54,6 +67,8 @@ class NewsRoom extends Plugin
 		}
 		return $content;
 	}
+	
+	
 }
 
 ?>
