@@ -6,5 +6,7 @@ Config::set( 'db_connection', array(
 	'prefix'=>'habari__'
 ));
 
+Config::set('cache_class', 'DisabledCache');
+
 // Config::set('locale', 'en-us');
 ?>
