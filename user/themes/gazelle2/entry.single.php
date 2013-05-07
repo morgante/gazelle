@@ -12,8 +12,8 @@
 			</div>
 			
 			<?php if ( !$post->info->comments_disabled || $post->comments->moderated->count ) :?>
-				<h2>Comments</h2>
-				<div class="comments">
+				<div class="comments" id="comments">
+					<h2><?php echo $post->comments->moderated->count; ?> Comments</h2>
 				<?php if ( $post->comments->moderated->count ) : ?>
 					<?php foreach ( $post->comments->moderated as $comment ) : ?>
 
@@ -28,21 +28,22 @@
 
 					?>
 
-					<div id="comment-<?php echo $comment->id; ?>" class="post-comment">
+					<div id="comment-<?php echo $comment->id; ?>" class="post-comment row">
 						
-						<h4 class="commentor"><?php echo $comment_url; ?></h4>
-						<p class="post-comment-link"><a href="#comment-<?php echo $comment->id; ?>" title="<?php _e( 'Time of this comment - Click for comment permalink' ); ?>"><?php $comment->date->out(); ?></a></p>
-						
-						<div class="comment-body">
-							<?php echo $comment->content_out; ?>
+						<div class="meta span2">
+							<h4 class="commentor"><?php echo $comment_url; ?></h4>
+							<p class="post-comment-link"><a href="#comment-<?php echo $comment->id; ?>" title="<?php _e( 'Time of this comment - Click for comment permalink' ); ?>"><?php $comment->date->out(); ?></a></p>
 							<?php if ( $comment->status == Comment::STATUS_UNAPPROVED ) : ?>
 							<p class="comment-message"><em><?php _e( 'Your comment is awaiting moderation' ) ;?></em></p>
 							<?php endif; ?>
 						</div>
+						
+						<div class="comment-body span5">
+							<?php echo $comment->content_out; ?>
+						</div>
 					</div>
 					<?php endforeach; ?>
 				<?php else : ?>
-					<h2><?php _e( 'Be the first to write a comment!' ); ?></h2>
 				<?php endif; ?>
 					<div id="post-comments-footer">
 						<!-- TODO: A hook can be placed here-->
@@ -52,6 +53,7 @@
 			
 			<?php if ( !$post->info->comments_disabled ) : ?>
 			<div class="comment-form form">
+				<h2>Add your voice</h2>
 			<?php if ( Session::has_messages() ) Session::messages_out(); ?>
 			<?php $post->comment_form()->out(); ?>
 			</div>
@@ -60,8 +62,9 @@
 				<p><?php _e( "Comments are closed for this post" ); ?></p>
 			</div>
 			<?php 	endif; ?>
-			
+		
 		</div>
+		
 	</div>
 	
 	<div id="sidebar" class="sidebar span4">

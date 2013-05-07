@@ -145,7 +145,19 @@ html, body {
 
 /* comments */
 .post .comment-form #comment_content {
-	width: 80%;
+	width: 100%;
+}
+
+.post-comment {
+	border-top: 2px solid #EFEFEF;
+}
+
+.comment-body {
+    margin-top: 10px;
+}
+
+.post-comment .meta {
+    text-align: right;
 }
 
 /* single */

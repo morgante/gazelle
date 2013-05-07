@@ -2,6 +2,39 @@
 
 class WaziTheme extends Theme
 {
+	
+	public function action_init_theme()
+	{
+		// Add FormUI template for comments
+		$this->add_template( 'gazelle_text', dirname( __FILE__ ) . '/formcontrol_text.php' );
+		$this->add_template( 'gazelle_textarea', dirname( __FILE__ ) . '/formcontrol_textarea.php' );
+		$this->add_template( 'gazelle_submit', dirname( __FILE__ ) . '/formcontrol_submit.php' );
+		
+	}
+	
+	/**
+	 * Customize comment form layout. Needs thorough commenting.
+	 */
+	public function action_form_comment( $form ) {
+		$form->class[] = 'form-horizontal';
+		
+		$form->cf_commenter->template = 'gazelle_text';
+		$form->cf_commenter->class[] = 'control-group';
+		
+		$form->cf_email->template = 'gazelle_text';
+		$form->cf_email->class[] = 'control-group';
+		
+		$form->cf_url->template = 'gazelle_text';
+		$form->cf_url->class[] = 'control-group';
+		
+		$form->cf_content->template = 'gazelle_textarea';
+		$form->cf_content->class[] = 'control-group';
+		
+		$form->cf_submit->template = 'gazelle_submit';
+		$form->cf_submit->class[] = 'control-group';
+		
+	}
+	
 	function action_template_header($theme) {
 		// Add the HTML5 shiv for IE < 9
 		Stack::add('template_header_javascript', array('http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js', null, '<!--[if lt IE 9]>%s<![endif]-->'), 'html5_shiv');
